@@ -10,22 +10,19 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  font-family: sans-serif;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-html {
-  font-family: sans-serif;
-}
-
 .flag-optional {
   color: #999;
 }
 
-input:invalid,
-input[type="checkbox"]:invalid + label::before {
+.is-validated input:invalid,
+.is-validated input[type="checkbox"]:invalid + label::before {
   border-color: #f33;
 }
 
@@ -40,8 +37,8 @@ input[type="checkbox"]:invalid + label::before {
   color: #fff;
 }
 
-.error-message:first-child,
-input:invalid + .error-message,
-input:invalid + label + .error-message {
+.is-validated .error-message:first-child,
+.is-validated input:invalid + .error-message,
+.is-validated input:invalid + label + .error-message {
   display: block;
 }
